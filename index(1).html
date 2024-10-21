@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTimer - Running Task</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFFFFF;
+            color: #272E34;
+            height: 100vh;
+        }
+
+        .timer-container {
+            border: 1px solid #AAAAAA;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 350px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-name {
+            font-size: 1.6rem; /* Tamaño de la tarea más grande */
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .timer-label {
+            font-size: 1.1rem; /* Tamaño de los títulos más grande */
+            color: #F66135;
+            margin-bottom: 10px;
+        }
+
+        .timer-value {
+            font-size: 2rem;
+            color: #AAAAAA;
+            margin-bottom: 25px;
+        }
+
+        .due-time {
+            font-size: 1rem;
+            color: #AAAAAA;
+            margin-bottom: 25px;
+        }
+
+        /* Espaciado ajustado */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            width: 48%;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Color actualizado para el botón rojo */
+        .pause-button {
+            background-color: #F66135; /* Nuevo color del botón Pause */
+            color: white;
+        }
+
+        .resume-button {
+            background-color: #757575;
+            color: white;
+        }
+
+        .done-button {
+            background-color: #4EA57D;
+            color: white;
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="timer-container">
+        <h2 class="task-name" id="taskName">Task Name</h2>
+
+        <div class="section">
+            <p class="timer-label">Work Session Remaining</p>
+            <p class="timer-value" id="workTime">00:00</p>
+        </div>
+        
+        <div class="section">
+            <p class="timer-label">Rest Time Remaining</p>
+            <p class="timer-value" id="restTime">00:00</p>
+        </div>
+        
+        <div class="section">
+            <p class="timer-label">Due Time</p>
+            <p class="due-time" id="dueDate">Loading...</p>
+        </div>
+
+        <div class="button-container">
+            <button class="pause-button">Pause</button>
+            <button class="resume-button">Resume</button>
+        </div>
+
+        <button class="done-button">Done</button>
+    </div>
+
+</body>
+</html>
